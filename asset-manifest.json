@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.66484136.chunk.css",
-    "main.js": "/static/js/main.669aeb2b.chunk.js",
-    "main.js.map": "/static/js/main.669aeb2b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d6fcf269.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d6fcf269.js.map",
-    "static/js/2.53e7d6ec.chunk.js": "/static/js/2.53e7d6ec.chunk.js",
-    "static/js/2.53e7d6ec.chunk.js.map": "/static/js/2.53e7d6ec.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.5c1cd449f5d59d16d79569c29ed2c410.js": "/precache-manifest.5c1cd449f5d59d16d79569c29ed2c410.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.66484136.chunk.css.map": "/static/css/main.66484136.chunk.css.map",
-    "static/js/2.53e7d6ec.chunk.js.LICENSE.txt": "/static/js/2.53e7d6ec.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "/static/media/Beleren2016-Bold.06d6a788.ttf"
+    "main.css": "/mtg-life-counter/static/css/main.eca8c5fb.chunk.css",
+    "main.js": "/mtg-life-counter/static/js/main.3584a3cd.chunk.js",
+    "main.js.map": "/mtg-life-counter/static/js/main.3584a3cd.chunk.js.map",
+    "runtime-main.js": "/mtg-life-counter/static/js/runtime-main.480c6cd6.js",
+    "runtime-main.js.map": "/mtg-life-counter/static/js/runtime-main.480c6cd6.js.map",
+    "static/js/2.53e7d6ec.chunk.js": "/mtg-life-counter/static/js/2.53e7d6ec.chunk.js",
+    "static/js/2.53e7d6ec.chunk.js.map": "/mtg-life-counter/static/js/2.53e7d6ec.chunk.js.map",
+    "index.html": "/mtg-life-counter/index.html",
+    "precache-manifest.260e8c98459771dae1417babeae7417b.js": "/mtg-life-counter/precache-manifest.260e8c98459771dae1417babeae7417b.js",
+    "service-worker.js": "/mtg-life-counter/service-worker.js",
+    "static/css/main.eca8c5fb.chunk.css.map": "/mtg-life-counter/static/css/main.eca8c5fb.chunk.css.map",
+    "static/js/2.53e7d6ec.chunk.js.LICENSE.txt": "/mtg-life-counter/static/js/2.53e7d6ec.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/mtg-life-counter/static/media/Beleren2016-Bold.06d6a788.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.d6fcf269.js",
+    "static/js/runtime-main.480c6cd6.js",
     "static/js/2.53e7d6ec.chunk.js",
-    "static/css/main.66484136.chunk.css",
-    "static/js/main.669aeb2b.chunk.js"
+    "static/css/main.eca8c5fb.chunk.css",
+    "static/js/main.3584a3cd.chunk.js"
   ]
 }
