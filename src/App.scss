@@ -1,10 +1,9 @@
+@import "assets/font/Font";
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
-@import "assets/font/Font";
 
 .mtg-container {
   height: 100vh;
@@ -28,4 +27,72 @@
     display: none;
   }
 }
-@import "component/LifeCounter/LifeCounter";
+.mtg-life-counter-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &:first-of-type {
+    @media (max-width: 720px) {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:last-child {
+    border-top: 1px solid #d8dcdd;
+    margin-bottom: 0;
+
+    .mtg-player-name {
+      margin-top: 20px;
+    }
+  }
+}
+
+.mtg-player-name {
+  background-color: #000000;
+  border: none;
+  color: wheat;
+  font-family: "MTG";
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  outline: none;
+  padding: 15px;
+  border-radius: 8px;
+
+  &:focus {
+    box-shadow: 0 0 1em #d8dcdd;
+  }
+}
+
+.mtg-life-counter {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mtg-life-counter-value {
+  font-size: 100px;
+  color: #d8dcdd;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.mtg-life-counter-button {
+  width: 100%;
+  height: 100%;
+  color: #d8dcdd;
+  font-family: "MTG";
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 40px;
+  border-radius: 100%;
+  max-width: 100px;
+
+  &:active {
+    box-shadow: 0 0 1em #d8dcdd;
+  }
+}
+
