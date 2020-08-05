@@ -5,7 +5,7 @@ type CounterButtonType = {
   updateValue: () => void;
 };
 
-const CounterButton = ({ symbol, updateValue }: CounterButtonType) => {
+const CounterButton: React.FC<CounterButtonType> = ({ symbol, updateValue }) => {
   return (
     <button className="mtg-life-counter-button" onClick={updateValue}>
       {symbol}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import InputText from "../InputText/InputText";
 import CounterButton from "../CounterButton/CounterButton";
 
-const LifeCounter = () => {
+const LifeCounter: React.FC = () => {
   const [counterValue, setConterValue] = useState(20);
   return (
     <div className="mtg-life-counter-container">
