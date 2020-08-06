@@ -35,16 +35,13 @@
   &:first-of-type {
     @media (max-width: 720px) {
       transform: rotate(180deg);
+      margin-bottom: 0;
     }
   }
 
   &:last-child {
     border-top: 1px solid #d8dcdd;
     margin-bottom: 0;
-
-    .mtg-player-name {
-      margin-top: 20px;
-    }
   }
 }
 
@@ -55,13 +52,14 @@
   font-family: "MTG";
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 20px;
   font-size: 20px;
   outline: none;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 10px 15px 15px;
+  border-radius: 52px;
 
   &:focus {
-    box-shadow: 0 0 1em #d8dcdd;
+    animation: pulse-focus 2s infinite;
   }
 }
 
@@ -77,6 +75,14 @@
   color: #d8dcdd;
   padding: 0 20px;
   text-align: center;
+
+  &.--increase {
+    animation: increase 200ms ease-in-out both;
+  }
+
+  &.--decrease {
+    animation: decrease 200ms ease-in-out both;
+  }
 }
 
 .mtg-life-counter-button {
@@ -92,7 +98,63 @@
   max-width: 100px;
 
   &:active {
-    box-shadow: 0 0 1em #d8dcdd;
+    animation: pulse 200ms cubic-bezier(0.66, 0, 0, 1);
   }
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(216, 220, 221, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 10px 20px rgba(216, 220, 221, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(216, 220, 221, 0);
+  }
+}
+
+@keyframes pulse-focus {
+  0% {
+    box-shadow: 0 0 0 0 rgba(216, 220, 221, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 10px 20px rgba(216, 220, 221, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(216, 220, 221, 0);
+  }
+}
+
+@keyframes increase {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    color: green;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes decrease {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+    color: red;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
