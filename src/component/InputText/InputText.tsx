@@ -19,6 +19,7 @@ const InputText = () => {
       onFocus={() => setInputValue("")}
       onBlur={() => onBlurHandler(inputValue)}
       onChange={(e) => setInputValue(e.target.value)}
+      onTouchStart={() => {}}
     />
   );
 };

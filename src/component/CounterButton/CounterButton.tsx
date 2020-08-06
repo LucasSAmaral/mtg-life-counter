@@ -18,6 +18,7 @@ const CounterButton: React.FC<CounterButtonType> = ({
         updateValue();
         setValueAnimation();
       }}
+      onTouchStart={() => {}}
     >
       {symbol}
     </button>
