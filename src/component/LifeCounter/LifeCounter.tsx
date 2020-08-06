@@ -4,6 +4,7 @@ import CounterButton from "../CounterButton/CounterButton";
 
 const LifeCounter: React.FC = () => {
   const [counterValue, setConterValue] = useState(20);
+  const [valueAnimation, setValueAnimation] = useState("");
   return (
     <div className="mtg-life-counter-container">
       <InputText />
@@ -11,11 +12,18 @@ const LifeCounter: React.FC = () => {
         <CounterButton
           symbol="-"
           updateValue={() => setConterValue(counterValue - 1)}
+          setValueAnimation={() => setValueAnimation("--decrease")}
         />
-        <div className="mtg-life-counter-value">{counterValue}</div>
+        <div
+          className={`mtg-life-counter-value ${valueAnimation}`}
+          onAnimationEnd={() => setValueAnimation("")}
+        >
+          {counterValue}
+        </div>
         <CounterButton
           symbol="+"
           updateValue={() => setConterValue(counterValue + 1)}
+          setValueAnimation={() => setValueAnimation("--increase")}
         />
       </div>
     </div>

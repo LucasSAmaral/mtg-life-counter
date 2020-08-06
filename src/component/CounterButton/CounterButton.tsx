@@ -3,11 +3,22 @@ import React from "react";
 type CounterButtonType = {
   symbol: string;
   updateValue: () => void;
+  setValueAnimation: () => void;
 };
 
-const CounterButton: React.FC<CounterButtonType> = ({ symbol, updateValue }) => {
+const CounterButton: React.FC<CounterButtonType> = ({
+  symbol,
+  updateValue,
+  setValueAnimation,
+}) => {
   return (
-    <button className="mtg-life-counter-button" onClick={updateValue}>
+    <button
+      className="mtg-life-counter-button"
+      onClick={() => {
+        updateValue();
+        setValueAnimation();
+      }}
+    >
       {symbol}
     </button>
   );
