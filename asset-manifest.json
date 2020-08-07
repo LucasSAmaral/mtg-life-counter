@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/mtg-life-counter/static/css/main.5447f3fc.chunk.css",
-    "main.js": "/mtg-life-counter/static/js/main.2090aad5.chunk.js",
-    "main.js.map": "/mtg-life-counter/static/js/main.2090aad5.chunk.js.map",
+    "main.css": "/mtg-life-counter/static/css/main.09318972.chunk.css",
+    "main.js": "/mtg-life-counter/static/js/main.796dba4a.chunk.js",
+    "main.js.map": "/mtg-life-counter/static/js/main.796dba4a.chunk.js.map",
     "runtime-main.js": "/mtg-life-counter/static/js/runtime-main.45f50031.js",
     "runtime-main.js.map": "/mtg-life-counter/static/js/runtime-main.45f50031.js.map",
     "static/js/2.401034b3.chunk.js": "/mtg-life-counter/static/js/2.401034b3.chunk.js",
     "static/js/2.401034b3.chunk.js.map": "/mtg-life-counter/static/js/2.401034b3.chunk.js.map",
     "index.html": "/mtg-life-counter/index.html",
-    "precache-manifest.605069cd0b173ddc21dc88f40757e66e.js": "/mtg-life-counter/precache-manifest.605069cd0b173ddc21dc88f40757e66e.js",
+    "precache-manifest.80ca4f8089e65abb32cffb37049a82fd.js": "/mtg-life-counter/precache-manifest.80ca4f8089e65abb32cffb37049a82fd.js",
     "service-worker.js": "/mtg-life-counter/service-worker.js",
-    "static/css/main.5447f3fc.chunk.css.map": "/mtg-life-counter/static/css/main.5447f3fc.chunk.css.map",
+    "static/css/main.09318972.chunk.css.map": "/mtg-life-counter/static/css/main.09318972.chunk.css.map",
     "static/js/2.401034b3.chunk.js.LICENSE.txt": "/mtg-life-counter/static/js/2.401034b3.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/mtg-life-counter/static/media/Beleren2016-Bold.06d6a788.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.45f50031.js",
     "static/js/2.401034b3.chunk.js",
-    "static/css/main.5447f3fc.chunk.css",
-    "static/js/main.2090aad5.chunk.js"
+    "static/css/main.09318972.chunk.css",
+    "static/js/main.796dba4a.chunk.js"
   ]
 }
