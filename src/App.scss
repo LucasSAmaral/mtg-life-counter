@@ -115,10 +115,10 @@ body {
 }
 
 .mtg-deck-color-container {
-  height: 9.375rem;
+  height: 8.375rem;
   position: relative;
   width: 100%;
-  max-height: 9.375rem;
+  max-height: 8.375rem;
   display: flex;
   justify-content: center;
 }
@@ -139,10 +139,10 @@ body {
   padding-top: 10px;
   position: absolute;
   transition: 400ms;
-  top: 110px;
+  top: 75%;
 
   &.--opened {
-    top: 25px;
+    top: 0;
   }
 
   p {
