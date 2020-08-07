@@ -6,6 +6,10 @@
   touch-action: manipulation;
 }
 
+body {
+  background-color: #000000;
+}
+
 .mtg-container {
   height: 100vh;
   background-color: #000000;
@@ -15,7 +19,9 @@
   @media (max-width: 720px) {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    overflow: hidden;
   }
 }
 
@@ -41,9 +47,14 @@
   }
 
   &:last-child {
-    border-top: 1px solid #d8dcdd;
     margin-bottom: 0;
   }
+}
+
+.mtg-divisor {
+  height: 1px;
+  background-color: #d8dcdd;
+  width: 100%;
 }
 
 .mtg-player-name {
@@ -101,6 +112,49 @@
   &:active {
     animation: pulse 200ms cubic-bezier(0.66, 0, 0, 1);
   }
+}
+
+.mtg-deck-color-container {
+  height: 8.375rem;
+  position: relative;
+  width: 100%;
+  max-height: 8.375rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mtg-deck-color {
+  font-family: "MTG";
+  color: #d8dcdd;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 1px solid #d8dcdd;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-left: 1px solid #d8dcdd;
+  border-right: 1px solid #d8dcdd;
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  padding-top: 10px;
+  position: absolute;
+  transition: 400ms;
+  top: 75%;
+
+  &.--opened {
+    top: 0;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+}
+
+.mtg-deck-color-options {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 20px;
 }
 
 @keyframes pulse {
