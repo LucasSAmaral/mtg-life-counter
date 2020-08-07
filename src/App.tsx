@@ -6,6 +6,7 @@ function App() {
     <div className="mtg-container">
       <h1 className="mtg-title">MTG Life Counter</h1>
       <LifeCounter />
+      <div className="mtg-divisor" />
       <LifeCounter />
     </div>
   );
