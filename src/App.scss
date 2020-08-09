@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0;
     overflow: hidden;
   }
 }
@@ -38,6 +38,26 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+
+  &.--red-deck {
+    background-color: #f9aa8f;
+  }
+
+  &.--blue-deck {
+    background-color: #aae0fa;
+  }
+
+  &.--black-deck {
+    background-color: #cbc2bf;
+  }
+
+  &.--white-deck {
+    background-color: #fffbd5;
+  }
+
+  &.--green-deck {
+    background-color: #9bd3ae;
+  }
 
   &:first-of-type {
     @media (max-width: 720px) {
@@ -152,9 +172,24 @@ body {
 
 .mtg-deck-color-options {
   display: flex;
+  justify-content: space-evenly;
   padding: 0;
   list-style: none;
   margin-bottom: 20px;
+
+  li {
+    button {
+      background-color: transparent;
+      width: 50px;
+      height: 50px;
+      outline: none;
+      border: none;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @keyframes pulse {
