@@ -1,13 +1,27 @@
 import React, { useState } from "react";
-import InputText from "../InputText/InputText";
-import CounterButton from "../CounterButton/CounterButton";
+import InputText from "./InputText";
+import CounterButton from "./CounterButton";
+import DeckColorComponent from "./DeckColor.component";
 
 const LifeCounter: React.FC = () => {
   const [counterValue, setConterValue] = useState(20);
   const [valueAnimation, setValueAnimation] = useState("");
-  const [isColorOptionsOpened, setIsColorOptionsOpened] = useState(false);
+  const [deckColor, setDeckColor] = useState("");
+
+  type colorsObjectType = {
+    [key: string]: string;
+  };
+
+  const colorsObject: colorsObjectType = {
+    RED: "--red-deck",
+    BLUE: "--blue-deck",
+    BLACK: "--black-deck",
+    WHITE: "--white-deck",
+    GREEN: "--green-deck",
+  };
+
   return (
-    <div className="mtg-life-counter-container">
+    <div className={`mtg-life-counter-container ${colorsObject[deckColor]}`}>
       <InputText />
       <div className="mtg-life-counter">
         <CounterButton
@@ -16,7 +30,9 @@ const LifeCounter: React.FC = () => {
           setValueAnimation={() => setValueAnimation("--decrease")}
         />
         <div
-          className={`mtg-life-counter-value ${valueAnimation}`}
+          className={`mtg-life-counter-value ${valueAnimation} ${
+            counterValue <= 0 ? "--lost" : ""
+          }`}
           onAnimationEnd={() => setValueAnimation("")}
         >
           {counterValue}
@@ -27,20 +43,7 @@ const LifeCounter: React.FC = () => {
           setValueAnimation={() => setValueAnimation("--increase")}
         />
       </div>
-      <div className="mtg-deck-color-container">
-        <div
-          className={`mtg-deck-color ${isColorOptionsOpened ? "--opened" : ""}`}
-        >
-          <p onClick={() => setIsColorOptionsOpened(!isColorOptionsOpened)}>
-            Change deck color
-          </p>
-          <ul className="mtg-deck-color-options">
-            <li>Primeira Opção</li>
-            <li>Segunda Opção</li>
-            <li>Terceira Opção</li>
-          </ul>
-        </div>
-      </div>
+      <DeckColorComponent setDeckColor={setDeckColor} />
     </div>
   );
 };

@@ -15,12 +15,12 @@ body {
   background-color: #000000;
   font-family: "MTG";
   padding: 20px 10px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @media (max-width: 720px) {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0;
     overflow: hidden;
   }
 }
@@ -38,6 +38,26 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+
+  &.--red-deck {
+    background-image: linear-gradient(to bottom, #000000, #f9aa8f);
+  }
+
+  &.--blue-deck {
+    background-image: linear-gradient(to bottom, #000000, #aae0fa);
+  }
+
+  &.--black-deck {
+    background-image: linear-gradient(to bottom, #000000, #cbc2bf);
+  }
+
+  &.--white-deck {
+    background-image: linear-gradient(to bottom, #000000, #fffbd5);
+  }
+
+  &.--green-deck {
+    background-image: linear-gradient(to bottom, #000000, #9bd3ae);
+  }
 
   &:first-of-type {
     @media (max-width: 720px) {
@@ -58,7 +78,7 @@ body {
 }
 
 .mtg-player-name {
-  background-color: #000000;
+  background-color: transparent;
   border: none;
   color: wheat;
   font-family: "MTG";
@@ -95,6 +115,10 @@ body {
   &.--decrease {
     animation: decrease 200ms ease-in-out both;
   }
+
+  &.--lost {
+    color: red;
+  }
 }
 
 .mtg-life-counter-button {
@@ -121,12 +145,21 @@ body {
   max-height: 8.375rem;
   display: flex;
   justify-content: center;
+
+  @media (min-width: 721px) {
+    display: none;
+  }
+
+  @media (max-height: 628px) {
+    display: none;
+  }
 }
 
 .mtg-deck-color {
   font-family: "MTG";
   color: #d8dcdd;
   text-align: center;
+  background-color: #000000;
   text-transform: uppercase;
   border-top: 1px solid #d8dcdd;
   border-top-left-radius: 8px;
@@ -152,9 +185,24 @@ body {
 
 .mtg-deck-color-options {
   display: flex;
+  justify-content: space-evenly;
   padding: 0;
   list-style: none;
   margin-bottom: 20px;
+
+  li {
+    button {
+      background-color: transparent;
+      width: 50px;
+      height: 50px;
+      outline: none;
+      border: none;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @keyframes pulse {
