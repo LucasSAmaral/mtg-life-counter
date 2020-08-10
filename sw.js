@@ -1,4 +1,4 @@
-var CACHE_NAME = "MTG Life Counter";
+var CACHE_NAME = "mtg-life-counter";
 
 var urlsToCache = [
   "/",

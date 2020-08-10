@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "54591f0e7927482ae2ef7152abd82cc9",
+    "revision": "75b3b738dc3716aec3c7d09c2a768486",
     "url": "/mtg-life-counter/index.html"
   },
   {
-    "revision": "12955d9f6c20405093d3",
+    "revision": "7debaa6820bf626b3a9a",
     "url": "/mtg-life-counter/static/css/main.4fba246b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mtg-life-counter/static/js/2.1b30836e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "12955d9f6c20405093d3",
-    "url": "/mtg-life-counter/static/js/main.d5c50b2c.chunk.js"
+    "revision": "7debaa6820bf626b3a9a",
+    "url": "/mtg-life-counter/static/js/main.4f529a54.chunk.js"
   },
   {
     "revision": "f7ad29d9eab6ca5aedf7",
