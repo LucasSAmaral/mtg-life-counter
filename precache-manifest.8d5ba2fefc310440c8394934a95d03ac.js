@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "75b3b738dc3716aec3c7d09c2a768486",
+    "revision": "de89a1b166488edf91c2fbab6b34751a",
     "url": "/mtg-life-counter/index.html"
   },
   {
