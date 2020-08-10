@@ -1,23 +1,28 @@
 {
   "files": {
-    "main.css": "/mtg-life-counter/static/css/main.09318972.chunk.css",
-    "main.js": "/mtg-life-counter/static/js/main.796dba4a.chunk.js",
-    "main.js.map": "/mtg-life-counter/static/js/main.796dba4a.chunk.js.map",
+    "main.css": "/mtg-life-counter/static/css/main.4fba246b.chunk.css",
+    "main.js": "/mtg-life-counter/static/js/main.320223ed.chunk.js",
+    "main.js.map": "/mtg-life-counter/static/js/main.320223ed.chunk.js.map",
     "runtime-main.js": "/mtg-life-counter/static/js/runtime-main.45f50031.js",
     "runtime-main.js.map": "/mtg-life-counter/static/js/runtime-main.45f50031.js.map",
-    "static/js/2.401034b3.chunk.js": "/mtg-life-counter/static/js/2.401034b3.chunk.js",
-    "static/js/2.401034b3.chunk.js.map": "/mtg-life-counter/static/js/2.401034b3.chunk.js.map",
+    "static/js/2.1b30836e.chunk.js": "/mtg-life-counter/static/js/2.1b30836e.chunk.js",
+    "static/js/2.1b30836e.chunk.js.map": "/mtg-life-counter/static/js/2.1b30836e.chunk.js.map",
     "index.html": "/mtg-life-counter/index.html",
-    "precache-manifest.80ca4f8089e65abb32cffb37049a82fd.js": "/mtg-life-counter/precache-manifest.80ca4f8089e65abb32cffb37049a82fd.js",
+    "precache-manifest.cf051eaa0b04b666b01af3be9636164e.js": "/mtg-life-counter/precache-manifest.cf051eaa0b04b666b01af3be9636164e.js",
     "service-worker.js": "/mtg-life-counter/service-worker.js",
-    "static/css/main.09318972.chunk.css.map": "/mtg-life-counter/static/css/main.09318972.chunk.css.map",
-    "static/js/2.401034b3.chunk.js.LICENSE.txt": "/mtg-life-counter/static/js/2.401034b3.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "/mtg-life-counter/static/media/Beleren2016-Bold.06d6a788.ttf"
+    "static/css/main.4fba246b.chunk.css.map": "/mtg-life-counter/static/css/main.4fba246b.chunk.css.map",
+    "static/js/2.1b30836e.chunk.js.LICENSE.txt": "/mtg-life-counter/static/js/2.1b30836e.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/mtg-life-counter/static/media/Beleren2016-Bold.06d6a788.ttf",
+    "static/media/black.png": "/mtg-life-counter/static/media/black.0a4a7c20.png",
+    "static/media/blue.png": "/mtg-life-counter/static/media/blue.05b01548.png",
+    "static/media/green.png": "/mtg-life-counter/static/media/green.9ed131c9.png",
+    "static/media/red.png": "/mtg-life-counter/static/media/red.ebf3c29c.png",
+    "static/media/white.png": "/mtg-life-counter/static/media/white.7e2fd731.png"
   },
   "entrypoints": [
     "static/js/runtime-main.45f50031.js",
-    "static/js/2.401034b3.chunk.js",
-    "static/css/main.09318972.chunk.css",
-    "static/js/main.796dba4a.chunk.js"
+    "static/js/2.1b30836e.chunk.js",
+    "static/css/main.4fba246b.chunk.css",
+    "static/js/main.320223ed.chunk.js"
   ]
 }
