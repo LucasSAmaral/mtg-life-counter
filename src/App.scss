@@ -115,6 +115,10 @@ body {
   &.--decrease {
     animation: decrease 200ms ease-in-out both;
   }
+
+  &.--lost {
+    color: red;
+  }
 }
 
 .mtg-life-counter-button {

@@ -30,7 +30,9 @@ const LifeCounter: React.FC = () => {
           setValueAnimation={() => setValueAnimation("--decrease")}
         />
         <div
-          className={`mtg-life-counter-value ${valueAnimation}`}
+          className={`mtg-life-counter-value ${valueAnimation} ${
+            counterValue <= 0 ? "--lost" : ""
+          }`}
           onAnimationEnd={() => setValueAnimation("")}
         >
           {counterValue}
