@@ -1,14 +1,13 @@
 var CACHE_NAME = "mtg-life-counter";
 
 var urlsToCache = [
-  "/",
-  "/static/js/bundle.js",
-  "/static/js/main.chunk.js",
-  "/static/js/1.chunk.js",
-  "/static/js/0.chunk.js",
-  "/favicon.ico",
-  "/css?family=Open+Sans",
-  "/icon?family=Material+Icons",
+  "/mtg-life-counter/",
+  "/mtg-life-counter/static/js/bundle.js",
+  "/mtg-life-counter/static/js/main.chunk.js",
+  "/mtg-life-counter/static/js/1.chunk.js",
+  "/mtg-life-counter/static/js/0.chunk.js",
+  "/mtg-life-counter/favicon.ico",
+  "/mtg-life-counter/css?family=MTG",
 ];
 
 self.addEventListener("install", function (event) {
