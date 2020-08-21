@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import LifeCounter from "./component/LifeCounter";
+import LifeCounter from "./component/LifeCounter.container";
 function App() {
   return (
     <div className="mtg-container">

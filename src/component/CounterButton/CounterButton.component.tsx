@@ -1,7 +1,8 @@
 import React from "react";
+import "./__CounterButton.scss";
 
 type CounterButtonType = {
-  symbol: string;
+  symbol: "+" | "-";
   updateValue: () => void;
   setValueAnimation: () => void;
 };
