@@ -1,0 +1,65 @@
+.mtg-deck-color-container {
+  height: 8.375rem;
+  position: relative;
+  width: 100%;
+  max-height: 8.375rem;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 721px) {
+    display: none;
+  }
+
+  @media (max-height: 628px) {
+    display: none;
+  }
+}
+.mtg-deck-color {
+  font-family: "MTG";
+  color: #d8dcdd;
+  text-align: center;
+  background-color: #000000;
+  text-transform: uppercase;
+  border-top: 1px solid #d8dcdd;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-left: 1px solid #d8dcdd;
+  border-right: 1px solid #d8dcdd;
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  padding-top: 10px;
+  position: absolute;
+  transition: 400ms;
+  top: 75%;
+
+  &.--opened {
+    top: 0;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+}
+
+.mtg-deck-color-options {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 20px;
+
+  li {
+    button {
+      background-color: transparent;
+      width: 50px;
+      height: 50px;
+      outline: none;
+      border: none;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

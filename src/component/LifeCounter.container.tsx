@@ -1,18 +1,28 @@
 import React, { useState } from "react";
-import InputText from "./InputText";
-import CounterButton from "./CounterButton";
-import DeckColorComponent from "./DeckColor.component";
+import InputText from "./InputText/InputText.component";
+import CounterButton from "./CounterButton/CounterButton.component";
+import DeckColorComponent from "./DeckColor/DeckColor.component";
 
 export type Colors = "RED" | "BLUE" | "BLACK" | "WHITE" | "GREEN" | "NONE";
 
+type ValueAnimation = "--decrease" | "--increase" | "";
+
 const LifeCounter: React.FC = () => {
   const [counterValue, setConterValue] = useState(20);
-  const [valueAnimation, setValueAnimation] = useState("");
+  const [valueAnimation, setValueAnimation] = useState<ValueAnimation>("");
   const [deckColor, setDeckColor] = useState<Colors>("NONE");
 
   type ColorsObjectType = {
-    [Key in Colors]: string;
+    [Key in Colors]: ColorsObjectClasses;
   };
+
+  type ColorsObjectClasses =
+    | ""
+    | "--red-deck"
+    | "--blue-deck"
+    | "--black-deck"
+    | "--white-deck"
+    | "--green-deck";
 
   const colorsObject: ColorsObjectType = {
     NONE: "",

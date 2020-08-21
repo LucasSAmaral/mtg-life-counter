@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import redIcon from "../assets/icons/red.png";
-import blackIcon from "../assets/icons/black.png";
-import blueIcon from "../assets/icons/blue.png";
-import whiteIcon from "../assets/icons/white.png";
-import greenIcon from "../assets/icons/green.png";
-import { Colors } from "./LifeCounter";
+import redIcon from "../../assets/icons/red.png";
+import blackIcon from "../../assets/icons/black.png";
+import blueIcon from "../../assets/icons/blue.png";
+import whiteIcon from "../../assets/icons/white.png";
+import greenIcon from "../../assets/icons/green.png";
+import { Colors } from "../LifeCounter.container";
+
+import "./__DeckColor.scss";
 
 type DeckColorComponentProps = {
   setDeckColor: (color: Colors) => void;

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./__InputText.scss";
+
 const InputText = () => {
   const PLAYER_NAME: string = "Player's Name";
 
