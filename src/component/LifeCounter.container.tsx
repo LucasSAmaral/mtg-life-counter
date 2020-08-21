@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import InputText from "./InputText/InputText.component";
-import CounterButton from "./CounterButton/CounterButton.component";
 import DeckColorComponent from "./DeckColor/DeckColor.component";
+import LifeCounterComponent from "./LifeCounter/LifeCounter.component";
 
 export type Colors = "RED" | "BLUE" | "BLACK" | "WHITE" | "GREEN" | "NONE";
 
-type ValueAnimation = "--decrease" | "--increase" | "";
+export type ValueAnimation = "--decrease" | "--increase" | "";
 
 const LifeCounter: React.FC = () => {
   const [counterValue, setConterValue] = useState(20);
@@ -36,26 +36,12 @@ const LifeCounter: React.FC = () => {
   return (
     <div className={`mtg-life-counter-container ${colorsObject[deckColor]}`}>
       <InputText />
-      <div className="mtg-life-counter">
-        <CounterButton
-          symbol="-"
-          updateValue={() => setConterValue(counterValue - 1)}
-          setValueAnimation={() => setValueAnimation("--decrease")}
-        />
-        <div
-          className={`mtg-life-counter-value ${valueAnimation} ${
-            counterValue <= 0 ? "--lost" : ""
-          }`}
-          onAnimationEnd={() => setValueAnimation("")}
-        >
-          {counterValue}
-        </div>
-        <CounterButton
-          symbol="+"
-          updateValue={() => setConterValue(counterValue + 1)}
-          setValueAnimation={() => setValueAnimation("--increase")}
-        />
-      </div>
+      <LifeCounterComponent
+        counterValue={counterValue}
+        valueAnimation={valueAnimation}
+        setConterValue={setConterValue}
+        setValueAnimation={setValueAnimation}
+      />
       <DeckColorComponent setDeckColor={setDeckColor} />
     </div>
   );
