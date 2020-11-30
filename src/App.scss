@@ -10,30 +10,6 @@ body {
   background-color: #000000;
 }
 
-.mtg-container {
-  height: 100vh;
-  background-color: #000000;
-  font-family: "MTG";
-  padding: 20px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @media (max-width: 720px) {
-    justify-content: space-between;
-    padding: 0;
-    overflow: hidden;
-  }
-}
-
-.mtg-title {
-  color: #d8dcdd;
-  text-align: center;
-  margin-top: 20px;
-
-  @media (max-width: 720px) {
-    display: none;
-  }
-}
 .mtg-life-counter-container {
   display: flex;
   flex-direction: column;
@@ -69,12 +45,6 @@ body {
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.mtg-divisor {
-  height: 1px;
-  background-color: #d8dcdd;
-  width: 100%;
 }
 
 .mtg-life-counter {
