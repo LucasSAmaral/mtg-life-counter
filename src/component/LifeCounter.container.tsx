@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import InputText from "./InputText/InputText.component";
 import DeckColorComponent from "./DeckColor/DeckColor.component";
 import LifeCounterComponent from "./LifeCounter/LifeCounter.component";
@@ -7,10 +7,19 @@ export type Colors = "RED" | "BLUE" | "BLACK" | "WHITE" | "GREEN" | "NONE";
 
 export type ValueAnimation = "--decrease" | "--increase" | "";
 
-const LifeCounter: React.FC = () => {
+type LifeCounterProps = {
+  reloadCounter: boolean;
+};
+
+const LifeCounter: React.FC<LifeCounterProps> = ({ reloadCounter }) => {
   const [counterValue, setConterValue] = useState(20);
   const [valueAnimation, setValueAnimation] = useState<ValueAnimation>("");
   const [deckColor, setDeckColor] = useState<Colors>("NONE");
+
+  useEffect(() => {
+    setConterValue(20);
+    // eslint-disable-next-line
+  }, [reloadCounter]);
 
   type ColorsObjectType = {
     [Key in Colors]: ColorsObjectClasses;
