@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import ReloadIcon from "./assets/icons/reload-icon.png";
 import LifeCounter from "./component/LifeCounter.container";
 import "./App.scss";
@@ -8,20 +8,19 @@ function App() {
   return (
     <MtgContainer>
       <MtgTitle>MTG Life Counter</MtgTitle>
-      <LifeCounter
-        reloadCounter={reloadCounter}
-        setReloadCounter={setReloadCounter}
-      />
+      <LifeCounter reloadCounter={reloadCounter} />
       <MtgButtonWrapper>
         <MtgDivisor />
         <MtgReloadButton onClick={() => setReloadCounter(true)}>
-          <img src={ReloadIcon} alt="" />
+          <MtgReloadIcon
+            src={ReloadIcon}
+            reloadCounter={reloadCounter}
+            alt=""
+            onAnimationEnd={() => setReloadCounter(false)}
+          />
         </MtgReloadButton>
       </MtgButtonWrapper>
-      <LifeCounter
-        reloadCounter={reloadCounter}
-        setReloadCounter={setReloadCounter}
-      />
+      <LifeCounter reloadCounter={reloadCounter} />
     </MtgContainer>
   );
 }
@@ -69,11 +68,35 @@ const MtgReloadButton = styled.button`
   background-color: black;
   border: none;
   outline: none;
+`;
 
-  img {
-    width: 100%;
-    height: auto;
-  }
+const MtgReloadIcon = styled.img<{ reloadCounter: boolean }>`
+  width: 100%;
+  height: auto;
+  ${({ reloadCounter }) =>
+    reloadCounter
+      ? css`
+          animation: ${ReloadRotate} 600ms linear both;
+        `
+      : ""}
+`;
+
+const ReloadRotate = keyframes`
+0% {
+  transform: rotate(0deg) scale(1);
+}
+25% {
+  transform: rotate(90deg) scale(1.2);
+}
+50% {
+  transform: rotate(180deg) scale(1.2);
+}
+75% {
+  transform: rotate(270deg) scale(1.2);
+}
+100% {
+  transform: rotate(360deg) scale(1);
+}
 `;
 
 export default App;

@@ -9,20 +9,15 @@ export type ValueAnimation = "--decrease" | "--increase" | "";
 
 type LifeCounterProps = {
   reloadCounter: boolean;
-  setReloadCounter: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const LifeCounter: React.FC<LifeCounterProps> = ({
-  reloadCounter,
-  setReloadCounter,
-}) => {
+const LifeCounter: React.FC<LifeCounterProps> = ({ reloadCounter }) => {
   const [counterValue, setConterValue] = useState(20);
   const [valueAnimation, setValueAnimation] = useState<ValueAnimation>("");
   const [deckColor, setDeckColor] = useState<Colors>("NONE");
 
   useEffect(() => {
     setConterValue(20);
-    setReloadCounter(false);
     // eslint-disable-next-line
   }, [reloadCounter]);
 
