@@ -7,8 +7,6 @@ import whiteIcon from "../../assets/icons/white.png";
 import greenIcon from "../../assets/icons/green.png";
 import { Colors } from "../LifeCounter/LifeCounter.container";
 
-import "./__DeckColor.scss";
-
 type DeckColorComponentProps = {
   setDeckColor: (color: Colors) => void;
 };
