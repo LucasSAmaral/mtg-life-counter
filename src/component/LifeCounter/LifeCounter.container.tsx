@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import InputText from "./InputText/InputText.component";
-import DeckColorComponent from "./DeckColor/DeckColor.component";
-import LifeCounterComponent from "./LifeCounter/LifeCounter.component";
+import InputText from "../InputText/InputText.component";
+import DeckColorComponent from "../DeckColor/DeckColor.component";
+import LifeCounterComponent from "./LifeCounter.component";
 
 export type Colors = "RED" | "BLUE" | "BLACK" | "WHITE" | "GREEN" | "NONE";
 

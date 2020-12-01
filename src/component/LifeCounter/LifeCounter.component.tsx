@@ -1,6 +1,6 @@
 import React from "react";
 import CounterButton from "../CounterButton/CounterButton.component";
-import { ValueAnimation } from "../LifeCounter.container";
+import { ValueAnimation } from "./LifeCounter.container";
 
 type LifeCounterComponentProps = {
   counterValue: number;
