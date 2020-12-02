@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 import ReloadIcon from "./assets/icons/reload-icon.png";
-import LifeCounter from "./component/LifeCounter.container";
+import LifeCounter from "./component/LifeCounter/LifeCounter.container";
 import "./App.scss";
 function App() {
   const [reloadCounter, setReloadCounter] = useState(false);
