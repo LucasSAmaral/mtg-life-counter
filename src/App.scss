@@ -10,43 +10,6 @@ body {
   background-color: #000000;
 }
 
-.mtg-life-counter-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-
-  &.--red-deck {
-    background-image: linear-gradient(to bottom, #000000, #f9aa8f);
-  }
-
-  &.--blue-deck {
-    background-image: linear-gradient(to bottom, #000000, #aae0fa);
-  }
-
-  &.--black-deck {
-    background-image: linear-gradient(to bottom, #000000, #cbc2bf);
-  }
-
-  &.--white-deck {
-    background-image: linear-gradient(to bottom, #000000, #fffbd5);
-  }
-
-  &.--green-deck {
-    background-image: linear-gradient(to bottom, #000000, #9bd3ae);
-  }
-
-  &:first-of-type {
-    @media (max-width: 720px) {
-      transform: rotate(180deg);
-      margin-bottom: 0;
-    }
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
 .mtg-life-counter {
   display: flex;
   height: 100px;
