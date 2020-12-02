@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 type CounterButtonProps = {
   symbol: "+" | "-";
@@ -25,8 +25,25 @@ const CounterButton: React.FC<CounterButtonProps> = ({
   );
 };
 
+const Pulse = keyframes`
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(216, 220, 221, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 10px 20px rgba(216, 220, 221, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(216, 220, 221, 0);
+  }
+`;
+
 const MtgLifeCounterButton = styled.button`
- width: 100%;
+  width: 100%;
   height: 100%;
   color: #d8dcdd;
   font-family: "MTG";
@@ -38,7 +55,7 @@ const MtgLifeCounterButton = styled.button`
   max-width: 100px;
 
   &:active {
-    animation: pulse 200ms cubic-bezier(0.66, 0, 0, 1);
+    animation: ${Pulse} 200ms cubic-bezier(0.66, 0, 0, 1);
   }
 `;
 
