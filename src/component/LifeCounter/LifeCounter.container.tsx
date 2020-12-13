@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import InputText from "../InputText/InputText.component";
 import DeckColorComponent from "../DeckColor/DeckColor.component";
 import LifeCounterComponent from "./LifeCounter.component";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export type Colors = "RED" | "BLUE" | "BLACK" | "WHITE" | "GREEN" | "NONE";
+export type Colors = "RED" | "BLUE" | "BLACK" | "WHITE" | "GREEN";
 
 export type ValueAnimation = "--decrease" | "--increase" | "";
 
@@ -13,48 +13,62 @@ type LifeCounterProps = {
 };
 
 type ColorsObjectType = {
-  [Key in Colors]: ColorsObjectClasses;
+  [Key in Colors]: ColorsHexadecimal;
 };
 
-type ColorsObjectClasses =
-  | "--none"
-  | "--red-deck"
-  | "--blue-deck"
-  | "--black-deck"
-  | "--white-deck"
-  | "--green-deck";
+type ColorsHexadecimal =
+  | "#D3202A"
+  | "#0E68AB"
+  | "#A69F9D"
+  | "#F9FAF2"
+  | "#00733E";
 
 const colorsObject: ColorsObjectType = {
-  NONE: "--none",
-  RED: "--red-deck",
-  BLUE: "--blue-deck",
-  BLACK: "--black-deck",
-  WHITE: "--white-deck",
-  GREEN: "--green-deck",
+  RED: "#D3202A",
+  BLUE: "#0E68AB",
+  BLACK: "#A69F9D",
+  WHITE: "#F9FAF2",
+  GREEN: "#00733E",
 };
 
-const deckColorHandler = (colors: ColorsObjectClasses) => {
-switch (colors) {
-  case "--red-deck":
-    return "linear-gradient(to bottom, #000000, #f9aa8f)"
-  case "--black-deck":
-    return "linear-gradient(to bottom, #000000, #cbc2bf)"
-  case "--blue-deck":
-    return "linear-gradient(to bottom, #000000, #aae0fa)"
-  case "--white-deck":
-    return "linear-gradient(to bottom, #000000, #fffbd5)"
-  case "--green-deck":
-    return "linear-gradient(to bottom, #000000, #9bd3ae)"
-  case "--none":
-  default:
-    return "none"
-}
-}
+const deckColorHandler = (
+  deckColors: Colors[],
+  colorsObject: ColorsObjectType
+) => {
+  if (deckColors.length > 0) {
+    return css`
+      background-image: linear-gradient(
+        to bottom,
+        #000000
+          ${deckColors.map((deckColor, index) => {
+            const deckColorsLength: number = deckColors.length;
+            return index + 1 <= deckColorsLength
+              ? `, ${colorsObject[deckColor]}`
+              : `${colorsObject[deckColor]}`;
+          })}
+      );
+    `;
+  }
+  return css`
+    background-color: #000000;
+  `;
+};
 
 const LifeCounter: React.FC<LifeCounterProps> = ({ reloadCounter }) => {
   const [counterValue, setConterValue] = useState(20);
   const [valueAnimation, setValueAnimation] = useState<ValueAnimation>("");
-  const [deckColor, setDeckColor] = useState<Colors>("NONE");
+  const [deckColors, setDeckColors] = useState<Colors[]>([]);
+
+  const handleColors = (color: Colors) => {
+    if (deckColors.length === 0) {
+      setDeckColors([color]);
+    } else if (deckColors.includes(color)) {
+      const newColors = deckColors.filter((colors) => colors !== color);
+      setDeckColors(newColors);
+    } else {
+      setDeckColors([...deckColors, color]);
+    }
+  };
 
   useEffect(() => {
     setConterValue(20);
@@ -62,7 +76,7 @@ const LifeCounter: React.FC<LifeCounterProps> = ({ reloadCounter }) => {
   }, [reloadCounter]);
 
   return (
-    <MtgLifeCounterContainer colors={colorsObject[deckColor]}>
+    <MtgLifeCounterContainer deckColors={deckColors}>
       <InputText />
       <LifeCounterComponent
         counterValue={counterValue}
@@ -70,16 +84,16 @@ const LifeCounter: React.FC<LifeCounterProps> = ({ reloadCounter }) => {
         setConterValue={setConterValue}
         setValueAnimation={setValueAnimation}
       />
-      <DeckColorComponent setDeckColor={setDeckColor} />
+      <DeckColorComponent handleColors={handleColors} deckColors={deckColors} />
     </MtgLifeCounterContainer>
   );
 };
 
-const MtgLifeCounterContainer = styled.div<{colors: ColorsObjectClasses}>`
+const MtgLifeCounterContainer = styled.div<{ deckColors: Colors[] }>`
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  background-image: ${({colors}) => deckColorHandler(colors)};
+  ${({ deckColors }) => deckColorHandler(deckColors, colorsObject)};
 
   &:first-of-type {
     @media (max-width: 720px) {
@@ -91,6 +105,6 @@ const MtgLifeCounterContainer = styled.div<{colors: ColorsObjectClasses}>`
   &:last-child {
     margin-bottom: 0;
   }
-`
+`;
 
 export default LifeCounter;

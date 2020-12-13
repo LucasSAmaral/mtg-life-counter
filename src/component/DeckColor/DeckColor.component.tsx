@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import redIcon from "../../assets/icons/red.png";
 import blackIcon from "../../assets/icons/black.png";
 import blueIcon from "../../assets/icons/blue.png";
@@ -8,50 +8,60 @@ import greenIcon from "../../assets/icons/green.png";
 import { Colors } from "../LifeCounter/LifeCounter.container";
 
 type DeckColorComponentProps = {
-  setDeckColor: (color: Colors) => void;
+  deckColors: Colors[];
+  handleColors: (color: Colors) => void;
 };
 
+type MtgDeckColorButtonProps = {
+  deckColors: Colors[];
+  color: Colors;
+};
+
+type ManaDecks = { colorIcon: string; color: Colors }[];
+
+const manaDecks: ManaDecks = [
+  {
+    colorIcon: redIcon,
+    color: "RED",
+  },
+  {
+    colorIcon: blueIcon,
+    color: "BLUE",
+  },
+  {
+    colorIcon: blackIcon,
+    color: "BLACK",
+  },
+  {
+    colorIcon: whiteIcon,
+    color: "WHITE",
+  },
+  {
+    colorIcon: greenIcon,
+    color: "GREEN",
+  },
+];
+
 const DeckColorComponent: React.FC<DeckColorComponentProps> = ({
-  setDeckColor,
+  deckColors,
+  handleColors,
 }) => {
   const [isColorOptionsOpened, setIsColorOptionsOpened] = useState(false);
 
-  type ManaDecks = { colorIcon: string; color: Colors }[];
-
-  const manaDecks: ManaDecks = [
-    {
-      colorIcon: redIcon,
-      color: "RED",
-    },
-    {
-      colorIcon: blueIcon,
-      color: "BLUE",
-    },
-    {
-      colorIcon: blackIcon,
-      color: "BLACK",
-    },
-    {
-      colorIcon: whiteIcon,
-      color: "WHITE",
-    },
-    {
-      colorIcon: greenIcon,
-      color: "GREEN",
-    },
-  ];
   return (
     <MtgDeckColorContainer>
-      <MtgDeckColor
-        isColorOptionsOpened={isColorOptionsOpened}
-      >
+      <MtgDeckColor isColorOptionsOpened={isColorOptionsOpened}>
         <p onClick={() => setIsColorOptionsOpened(!isColorOptionsOpened)}>
           Change deck color
         </p>
         <MtgDeckColorOptions>
           {manaDecks.map((manaDeck) => (
             <li key={manaDeck.color}>
-              <MtgDeckColorButton onClick={() => setDeckColor(manaDeck.color)}>
+              <MtgDeckColorButton
+                deckColors={deckColors}
+                color={manaDeck.color}
+                onClick={() => handleColors(manaDeck.color)}
+              >
                 <img src={manaDeck.colorIcon} alt={manaDeck.color} />
               </MtgDeckColorButton>
             </li>
@@ -63,7 +73,7 @@ const DeckColorComponent: React.FC<DeckColorComponentProps> = ({
 };
 
 const MtgDeckColorContainer = styled.div`
-height: 8.375rem;
+  height: 8.375rem;
   position: relative;
   width: 100%;
   max-height: 8.375rem;
@@ -79,8 +89,8 @@ height: 8.375rem;
   }
 `;
 
-const MtgDeckColor = styled.div<{isColorOptionsOpened: boolean}>`
-font-family: "MTG";
+const MtgDeckColor = styled.div<{ isColorOptionsOpened: boolean }>`
+  font-family: "MTG";
   color: #d8dcdd;
   text-align: center;
   background-color: #000000;
@@ -96,7 +106,7 @@ font-family: "MTG";
   padding-top: 10px;
   position: absolute;
   transition: 400ms;
-  top: ${({isColorOptionsOpened}) => isColorOptionsOpened ? "0" : "75%"};
+  top: ${({ isColorOptionsOpened }) => (isColorOptionsOpened ? "0" : "75%")};
 
   p {
     margin-bottom: 40px;
@@ -109,14 +119,21 @@ const MtgDeckColorOptions = styled.ul`
   padding: 0;
   list-style: none;
   margin-bottom: 20px;
-`
+`;
 
-const MtgDeckColorButton = styled.button`
+const MtgDeckColorButton = styled.button<MtgDeckColorButtonProps>`
   background-color: transparent;
   width: 50px;
   height: 50px;
   outline: none;
-  border: none;
+  border: 2px solid;
+  border-radius: 25px;
+  ${({ deckColors, color }) =>
+    deckColors.includes(color)
+      ? css`
+          border-color: gold;
+        `
+      : ""}
   img {
     height: 100%;
     width: 100%;
