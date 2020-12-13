@@ -9,7 +9,7 @@ function App() {
     <MtgContainer>
       <MtgTitle>MTG Life Counter</MtgTitle>
       <LifeCounter reloadCounter={reloadCounter} />
-      <MtgButtonWrapper>
+      <MtgReloadButtonWrapper>
         <MtgDivisor />
         <MtgReloadButton onClick={() => setReloadCounter(true)}>
           <MtgReloadIcon
@@ -19,7 +19,7 @@ function App() {
             onAnimationEnd={() => setReloadCounter(false)}
           />
         </MtgReloadButton>
-      </MtgButtonWrapper>
+      </MtgReloadButtonWrapper>
       <LifeCounter reloadCounter={reloadCounter} />
     </MtgContainer>
   );
@@ -50,7 +50,7 @@ const MtgTitle = styled.h1`
   }
 `;
 
-const MtgButtonWrapper = styled.div`
+const MtgReloadButtonWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@ const MtgDivisor = styled.div`
 const MtgReloadButton = styled.button`
   position: absolute;
   top: -15px;
-  background-color: black;
+  background-color: transparent;
   border: none;
   outline: none;
 `;

@@ -36,10 +36,14 @@ const deckColorHandler = (
   colorsObject: ColorsObjectType
 ) => {
   if (deckColors.length > 0) {
+    if (deckColors.length === 1) {
+      return css`
+        background-color: ${colorsObject[deckColors[0]]};
+      `;
+    }
     return css`
       background-image: linear-gradient(
-        to bottom,
-        #000000
+        45deg
           ${deckColors.map((deckColor, index) => {
             const deckColorsLength: number = deckColors.length;
             return index + 1 <= deckColorsLength
@@ -93,6 +97,7 @@ const MtgLifeCounterContainer = styled.div<{ deckColors: Colors[] }>`
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  height: 100%;
   ${({ deckColors }) => deckColorHandler(deckColors, colorsObject)};
 
   &:first-of-type {

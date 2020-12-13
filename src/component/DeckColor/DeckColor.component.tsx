@@ -106,7 +106,7 @@ const MtgDeckColor = styled.div<{ isColorOptionsOpened: boolean }>`
   padding-top: 10px;
   position: absolute;
   transition: 400ms;
-  top: ${({ isColorOptionsOpened }) => (isColorOptionsOpened ? "0" : "75%")};
+  top: ${({ isColorOptionsOpened }) => (isColorOptionsOpened ? "65%" : "135%")};
 
   p {
     margin-bottom: 40px;
