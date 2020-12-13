@@ -9,7 +9,7 @@ import { Colors } from "../LifeCounter/LifeCounter.container";
 
 type DeckColorComponentProps = {
   deckColors: Colors[];
-  handleColors: (color: Colors) => void;
+  handleColorsArray: (color: Colors) => void;
 };
 
 type MtgDeckColorButtonProps = {
@@ -44,7 +44,7 @@ const manaDecks: ManaDecks = [
 
 const DeckColorComponent: React.FC<DeckColorComponentProps> = ({
   deckColors,
-  handleColors,
+  handleColorsArray,
 }) => {
   const [isColorOptionsOpened, setIsColorOptionsOpened] = useState(false);
 
@@ -60,7 +60,7 @@ const DeckColorComponent: React.FC<DeckColorComponentProps> = ({
               <MtgDeckColorButton
                 deckColors={deckColors}
                 color={manaDeck.color}
-                onClick={() => handleColors(manaDeck.color)}
+                onClick={() => handleColorsArray(manaDeck.color)}
               >
                 <img src={manaDeck.colorIcon} alt={manaDeck.color} />
               </MtgDeckColorButton>

@@ -63,7 +63,7 @@ const LifeCounter: React.FC<LifeCounterProps> = ({ reloadCounter }) => {
   const [valueAnimation, setValueAnimation] = useState<ValueAnimation>("");
   const [deckColors, setDeckColors] = useState<Colors[]>([]);
 
-  const handleColors = (color: Colors) => {
+  const handleColorsArray = (color: Colors) => {
     if (deckColors.length === 0) {
       setDeckColors([color]);
     } else if (deckColors.includes(color)) {
@@ -88,7 +88,10 @@ const LifeCounter: React.FC<LifeCounterProps> = ({ reloadCounter }) => {
         setConterValue={setConterValue}
         setValueAnimation={setValueAnimation}
       />
-      <DeckColorComponent handleColors={handleColors} deckColors={deckColors} />
+      <DeckColorComponent
+        handleColorsArray={handleColorsArray}
+        deckColors={deckColors}
+      />
     </MtgLifeCounterContainer>
   );
 };
