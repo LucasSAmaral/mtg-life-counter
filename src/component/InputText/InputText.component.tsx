@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const InputText = () => {
   const PLAYER_NAME: string = "Player's Name";
@@ -36,15 +36,15 @@ const PulseFocus = keyframes`
   100% {
     box-shadow: 0 0 0 0 rgba(216, 220, 221, 0);
   }
-`
+`;
 
 const MtgPlayerName = styled.input`
-background-color: transparent;
+  background-color: transparent;
   border: none;
   color: wheat;
   font-family: "MTG";
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-size: 20px;
   outline: none;
@@ -54,6 +54,6 @@ background-color: transparent;
   &:focus {
     animation: ${PulseFocus} 2s infinite;
   }
-`
+`;
 
 export default InputText;
