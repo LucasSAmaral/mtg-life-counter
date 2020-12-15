@@ -106,7 +106,24 @@ const MtgDeckColor = styled.div<{ isColorOptionsOpened: boolean }>`
   padding-top: 10px;
   position: absolute;
   transition: 400ms;
-  top: ${({ isColorOptionsOpened }) => (isColorOptionsOpened ? "65%" : "135%")};
+
+  @media (min-height: 812px) and (max-height: 823px) {
+    top: ${({ isColorOptionsOpened }) =>
+      isColorOptionsOpened ? "65%" : "135%"};
+  }
+
+  @media (max-height: 736px) {
+    top: ${({ isColorOptionsOpened }) =>
+      isColorOptionsOpened ? "15%" : "105%"};
+  }
+
+  @media (max-height: 667px) {
+    top: ${({ isColorOptionsOpened }) => (isColorOptionsOpened ? "5%" : "80%")};
+  }
+
+  @media (max-height: 640px) {
+    top: ${({ isColorOptionsOpened }) => (isColorOptionsOpened ? "0%" : "65%")};
+  }
 
   p {
     margin-bottom: 40px;
