@@ -10,6 +10,7 @@ export type ValueAnimation = "--decrease" | "--increase" | "";
 
 type LifeCounterProps = {
   reloadCounter: boolean;
+  dataCyClass: string;
 };
 
 type ColorsObjectType = {
@@ -58,7 +59,10 @@ const deckColorHandler = (
   `;
 };
 
-const LifeCounter: React.FC<LifeCounterProps> = ({ reloadCounter }) => {
+const LifeCounter: React.FC<LifeCounterProps> = ({
+  reloadCounter,
+  dataCyClass,
+}) => {
   const [counterValue, setConterValue] = useState(20);
   const [valueAnimation, setValueAnimation] = useState<ValueAnimation>("");
   const [deckColors, setDeckColors] = useState<Colors[]>([]);
@@ -80,7 +84,7 @@ const LifeCounter: React.FC<LifeCounterProps> = ({ reloadCounter }) => {
   }, [reloadCounter]);
 
   return (
-    <MtgLifeCounterContainer deckColors={deckColors}>
+    <MtgLifeCounterContainer deckColors={deckColors} className={dataCyClass}>
       <InputText />
       <LifeCounterComponent
         counterValue={counterValue}

@@ -37,11 +37,13 @@ const LifeCounterComponent: React.FC<LifeCounterComponentProps> = ({
         symbol="-"
         updateValue={() => setConterValue(counterValue - 1)}
         setValueAnimation={() => setValueAnimation("--decrease")}
+        dataCy="decrease"
       />
       <MtgLifeCounterValue
         valueAnimation={valueAnimation}
         counterValue={counterValue}
         onAnimationEnd={() => setValueAnimation("")}
+        data-cy="value"
       >
         {counterValue}
       </MtgLifeCounterValue>
@@ -49,6 +51,7 @@ const LifeCounterComponent: React.FC<LifeCounterComponentProps> = ({
         symbol="+"
         updateValue={() => setConterValue(counterValue + 1)}
         setValueAnimation={() => setValueAnimation("--increase")}
+        dataCy="increase"
       />
     </MtgLifeCounter>
   );

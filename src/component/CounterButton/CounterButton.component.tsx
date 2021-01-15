@@ -5,12 +5,14 @@ type CounterButtonProps = {
   symbol: "+" | "-";
   updateValue: () => void;
   setValueAnimation: () => void;
+  dataCy: "decrease" | "increase";
 };
 
 const CounterButton: React.FC<CounterButtonProps> = ({
   symbol,
   updateValue,
   setValueAnimation,
+  dataCy,
 }) => {
   return (
     <MtgLifeCounterButton
@@ -19,6 +21,7 @@ const CounterButton: React.FC<CounterButtonProps> = ({
         setValueAnimation();
       }}
       onTouchStart={() => {}}
+      data-cy={dataCy}
     >
       {symbol}
     </MtgLifeCounterButton>
