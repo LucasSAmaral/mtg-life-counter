@@ -8,7 +8,10 @@ function App() {
   return (
     <MtgContainer>
       <MtgTitle>MTG Life Counter</MtgTitle>
-      <LifeCounter reloadCounter={reloadCounter} />
+      <LifeCounter
+        reloadCounter={reloadCounter}
+        dataCyClass="first-life-counter"
+      />
       <MtgReloadButtonWrapper>
         <MtgDivisor />
         <MtgReloadButton onClick={() => setReloadCounter(true)}>
@@ -17,10 +20,14 @@ function App() {
             reloadCounter={reloadCounter}
             alt=""
             onAnimationEnd={() => setReloadCounter(false)}
+            data-cy="restart-counters"
           />
         </MtgReloadButton>
       </MtgReloadButtonWrapper>
-      <LifeCounter reloadCounter={reloadCounter} />
+      <LifeCounter
+        reloadCounter={reloadCounter}
+        dataCyClass="second-life-counter"
+      />
     </MtgContainer>
   );
 }
