@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/mtg-life-counter/static/css/main.7c042f4b.chunk.css",
-    "main.js": "/mtg-life-counter/static/js/main.e3a4a01a.chunk.js",
-    "main.js.map": "/mtg-life-counter/static/js/main.e3a4a01a.chunk.js.map",
+    "main.js": "/mtg-life-counter/static/js/main.946b6dac.chunk.js",
+    "main.js.map": "/mtg-life-counter/static/js/main.946b6dac.chunk.js.map",
     "runtime-main.js": "/mtg-life-counter/static/js/runtime-main.45f50031.js",
     "runtime-main.js.map": "/mtg-life-counter/static/js/runtime-main.45f50031.js.map",
     "static/js/2.c86c4121.chunk.js": "/mtg-life-counter/static/js/2.c86c4121.chunk.js",
     "static/js/2.c86c4121.chunk.js.map": "/mtg-life-counter/static/js/2.c86c4121.chunk.js.map",
     "index.html": "/mtg-life-counter/index.html",
-    "precache-manifest.41603558283b70708252692b5bb47a0f.js": "/mtg-life-counter/precache-manifest.41603558283b70708252692b5bb47a0f.js",
+    "precache-manifest.2b9f1c110165de1e2cc5dd44e53dc2cd.js": "/mtg-life-counter/precache-manifest.2b9f1c110165de1e2cc5dd44e53dc2cd.js",
     "service-worker.js": "/mtg-life-counter/service-worker.js",
     "static/css/main.7c042f4b.chunk.css.map": "/mtg-life-counter/static/css/main.7c042f4b.chunk.css.map",
     "static/js/2.c86c4121.chunk.js.LICENSE.txt": "/mtg-life-counter/static/js/2.c86c4121.chunk.js.LICENSE.txt",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.45f50031.js",
     "static/js/2.c86c4121.chunk.js",
     "static/css/main.7c042f4b.chunk.css",
-    "static/js/main.e3a4a01a.chunk.js"
+    "static/js/main.946b6dac.chunk.js"
   ]
 }
