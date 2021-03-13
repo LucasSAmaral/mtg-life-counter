@@ -10,9 +10,9 @@ function App() {
 
   useEffect(() => {
     document.addEventListener(
-      "touchstart",
+      "DOMContentLoaded",
       function enableNoSleep() {
-        document.removeEventListener("touchstart", enableNoSleep, false);
+        document.removeEventListener("DOMContentLoaded", enableNoSleep, false);
         noSleep.enable();
       },
       false
