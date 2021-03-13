@@ -1,10 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes, css } from "styled-components";
+import NoSleep from "nosleep.js";
 import ReloadIcon from "./assets/icons/reload-icon.png";
 import LifeCounter from "./component/LifeCounter/LifeCounter.container";
 import "./App.scss";
 function App() {
   const [reloadCounter, setReloadCounter] = useState(false);
+  const noSleep = new NoSleep();
+
+  useEffect(() => {
+    document.addEventListener(
+      "touchstart",
+      function enableNoSleep() {
+        document.removeEventListener("touchstart", enableNoSleep, false);
+        noSleep.enable();
+      },
+      false
+    );
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <MtgContainer>
       <MtgTitle>MTG Life Counter</MtgTitle>
