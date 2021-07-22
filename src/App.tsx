@@ -1,24 +1,29 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes, css } from "styled-components";
-import NoSleep from "nosleep.js";
 import ReloadIcon from "./assets/icons/reload-icon.png";
 import LifeCounter from "./component/LifeCounter/LifeCounter.container";
 import "./App.scss";
-function App() {
+
+const requestWakeLock = async () => {
+  try {
+    // @ts-ignore
+     await navigator.wakeLock.request();
+  } catch (err) {
+    console.error(`${err.name}, ${err.message}`);
+  }
+};
+
+const wakeLockRequest = async () => {
+  await requestWakeLock()
+}
+
+ function App() {
   const [reloadCounter, setReloadCounter] = useState(false);
-  const noSleep = new NoSleep();
 
   useEffect(() => {
-    document.addEventListener(
-      "DOMContentLoaded",
-      function enableNoSleep() {
-        document.removeEventListener("DOMContentLoaded", enableNoSleep, false);
-        noSleep.enable();
-      },
-      false
-    );
+    wakeLockRequest().then(r => r);
     // eslint-disable-next-line
-  }, []);
+  }, [])
 
   return (
     <MtgContainer>
