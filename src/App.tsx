@@ -2,26 +2,16 @@ import React, { useState, useEffect } from "react";
 import styled, { keyframes, css } from "styled-components";
 import ReloadIcon from "./assets/icons/reload-icon.png";
 import LifeCounter from "./component/LifeCounter/LifeCounter.container";
+import useStayAwake from "use-stay-awake";
 import "./App.scss";
 
-const requestWakeLock = async () => {
-  try {
-    // @ts-ignore
-     await navigator.wakeLock.request();
-  } catch (err) {
-    console.error(`${err.name}, ${err.message}`);
-  }
-};
-
-const wakeLockRequest = async () => {
-  await requestWakeLock()
-}
 
  function App() {
-  const [reloadCounter, setReloadCounter] = useState(false);
+   const [reloadCounter, setReloadCounter] = useState(false);
+   const { preventSleeping } = useStayAwake();
 
   useEffect(() => {
-    wakeLockRequest().then(r => r);
+    preventSleeping()
     // eslint-disable-next-line
   }, [])
 
