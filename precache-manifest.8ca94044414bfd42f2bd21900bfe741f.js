@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6fdff13d2bd8ac8e257945a7d891e115",
+    "revision": "a4d788e10313b709d084cc5145e3a123",
     "url": "/mtg-life-counter/index.html"
   },
   {
-    "revision": "8919c45880f86b8d7dec",
+    "revision": "edb962631c0e41b30dd5",
     "url": "/mtg-life-counter/static/css/main.66edc2da.chunk.css"
   },
   {
-    "revision": "1ce4d680b92a24a85a3f",
-    "url": "/mtg-life-counter/static/js/2.9c15301e.chunk.js"
+    "revision": "9ebad0a7dc3a65aeac82",
+    "url": "/mtg-life-counter/static/js/2.891bbe5e.chunk.js"
   },
   {
     "revision": "9b318b6fb13190fe82c0677e9264b3c7",
-    "url": "/mtg-life-counter/static/js/2.9c15301e.chunk.js.LICENSE.txt"
+    "url": "/mtg-life-counter/static/js/2.891bbe5e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8919c45880f86b8d7dec",
-    "url": "/mtg-life-counter/static/js/main.126acf02.chunk.js"
+    "revision": "edb962631c0e41b30dd5",
+    "url": "/mtg-life-counter/static/js/main.604800de.chunk.js"
   },
   {
     "revision": "3da2a57f17d645b0a7d6",

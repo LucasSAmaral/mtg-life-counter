@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mtg-life-counter/precache-manifest.76f2eae5e156201b6ee761f85bb4ec10.js"
+  "/mtg-life-counter/precache-manifest.8ca94044414bfd42f2bd21900bfe741f.js"
 );
 
 self.addEventListener('message', (event) => {
