@@ -1,6 +1,6 @@
 {
   "name": "mtg-life-counter",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "private": true,
   "homepage": "http://LucasSAmaral.github.io/mtg-life-counter/",
   "dependencies": {
