@@ -1,6 +1,6 @@
 {
   "name": "mtg-life-counter",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "private": true,
   "homepage": "http://LucasSAmaral.github.io/mtg-life-counter/",
   "dependencies": {
@@ -17,8 +17,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "styled-components": "^5.2.1",
-    "typescript": "~3.7.2",
-    "use-stay-awake": "^0.1.7"
+    "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
